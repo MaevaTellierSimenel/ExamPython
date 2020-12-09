@@ -3,6 +3,31 @@ from colorama import init
 init()
 from colorama import Fore, Back, Style
 
+import random
+
+def tableauRandom(tableauAlea1):
+    motAlea = int(input("Un nombre ?"))
+    if (motAlea ==1):
+        tableauAlea1 = ['c','a','s','t','o','r']
+    if (motAlea ==2):
+        tableauAlea1 = ['c','i','n','e','m','a']
+    if (motAlea ==3):
+        tableauAlea1 = ['c','y','p','r','e','s']
+    if (motAlea ==4):
+        tableauAlea1 = ['c','i','t','r','o','n']
+    if (motAlea ==5):
+        tableauAlea1 = ['o','r','a','n','g','e']
+    if (motAlea ==6):
+        tableauAlea1 = ['p','y','t','h','o','n']
+    if (motAlea ==7):
+        tableauAlea1 = ['g','i','t','h','u','b']
+    if (motAlea ==8):
+        tableauAlea1 = ['c','h','a','i','s','e']
+    if (motAlea ==9):
+        tableauAlea1 = ['c','o','l','i','e','r']
+    if (motAlea ==10):
+        tableauAlea1 = ['c','a','s','q','u','e']
+        
 def defTableauJoueur(tableauMotMystere1, tableauJoueur1):
     for i in range (1,7):
         tableauJoueur1[i-1] = input("Quelle mot ? (Lettre par lettre en minuscule) : ")
@@ -24,10 +49,10 @@ for i in range (1,7):
             print(Fore.WHITE + tableauJoueur1[i-1])
             print(Back.RED + tableauJoueur1[i-1])
 
-
-
-tableauMotMystere = ['c','a','s','t','o','r']
+tableauAlea = ['_','_','_','_','_','_']
+tableauRandom (tableauAlea)
+tableauMotMystere = tableauAlea
 tableauJoueur = ['_','_','_','_','_','_']
 verification = 3
 defTableauJoueur (tableauMotMystere, tableauJoueur)
-chercherLesLettres (tableauMotMystere, tableauJoueur)
+chercherLesLettres (tableauMotMystere, tableauJoueur, verification)
