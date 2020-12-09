@@ -12,11 +12,15 @@ def chercherLesLettres (tableauMotMystere1, tableauJoueur1):
     for i in range (1,7):
         for j in range (1,7):
             if (tableauJoueur1[i-1] != tableauMotMystere1[j-1]):
-                print(Fore.WHITE tableauJoueur1[i-1])
-                print(Back.BLUE tableauJoueur1[i-1])
+                print(Fore.BLACK + tableauJoueur1[i-1])
+                print(Back.YELLOW + tableauJoueur1[i-1])
+            if (tableauJoueur1[i-1] != tableauMotMystere1[0] and tableauMotMystere1[1] and tableauMotMystere1[2] and tableauMotMystere1[3] and tableauMotMystere1[4] and tableauMotMystere1[5]):
+            	print(Fore.WHITE + tableauJoueur1[i-1])
+            	print(Back.BLUE + tableauJoueur1[i-1])
             else :
-                print(Fore.WHITE tableauJoueur1[i-1])
-                print(Back.RED tableauJoueur1[i-1])
+                print(Fore.WHITE + tableauJoueur1[i-1])
+                print(Back.RED + tableauJoueur1[i-1])
+
 
 
 
