@@ -10,12 +10,12 @@ def defTableauJoueur(tableauJoueur1):
         tableauJoueur1[i-1] = input("Quelle mot ? (Lettre par lettre en minuscule) : ")
     return tableauJoueur1d
 
-def chercherLesLettres (tableauAlea1, tableauJoueur1, verification1):            
-	for i in range (1,7):
+def chercherLesLettres (tableauAlea1, tableauJoueur1, verification1):
+    for i in range (1,7):
         if (tableauJoueur1[i-1] != tableauAlea1[i-1]):
             verification1 = 2
-        if (tableauJoueur1[i-1] != tableauAlea1[0] and tableauAlea1[1] and tableauAlea1[2] and tableauAlea1[3] and tableauAlea1[4] and tableauAlea1[5]):
-            verification1 = 1
+            if (tableauJoueur1[i-1] != tableauAlea1[0] and tableauAlea1[1] and tableauAlea1[2] and tableauAlea1[3] and tableauAlea1[4] and tableauAlea1[5]):
+                verification1 = 1
         if (verification1 == 2):
             print(Fore.BLACK + tableauJoueur1[i-1])
             print(Back.YELLOW + tableauJoueur1[i-1])
@@ -25,9 +25,12 @@ def chercherLesLettres (tableauAlea1, tableauJoueur1, verification1):
         if (verification1 == 3):
             print(Fore.WHITE + tableauJoueur1[i-1])
             print(Back.RED + tableauJoueur1[i-1])
-
-def victoire (tableauJoueur1, tableauAlea1):
+        verification1 =3
+    return verification1
+    
+def victoireTest (tableauJoueur1, tableauAlea1, victoire2):
     if (tableauJoueur1 == tableauAlea1):
+        victoire2 = True
         print("C'EST GAGNE !")
     else :
         print("PERDU")
@@ -56,7 +59,8 @@ if (motAlea ==10):
 
 tableauJoueur = ['_','_','_','_','_','_']
 verification = 3
-for time in range (1,9):
-    defTableauJoueur (tableauAlea, tableauJoueur)
+victoire = False
+while (victoire==False):
+    defTableauJoueur (tableauJoueur)
     chercherLesLettres (tableauAlea, tableauJoueur, verification)
-victoire (tableauJoueur, tableauAlea)
+    victoireTest (tableauJoueur, tableauAlea, victoire)
