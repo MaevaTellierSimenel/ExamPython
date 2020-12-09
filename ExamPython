@@ -1,0 +1,14 @@
+pip install colorama
+
+def defTableauJoueur(tableauMotMystere1, tableauJoueur1):
+    for i in range (1,7):
+        tableauJoueur1[i-1] = input("Quelle mot ? (Lettre par lettre en minuscule)")
+        
+
+
+
+
+tableauMotMystere = ['c','a','s','t','o','r']
+tableauJoueur = ['_','_','_','_','_','_']
+defTableauJoueur (tableauMotMystere, tableauJoueur)
+print (tableauJoueur)
