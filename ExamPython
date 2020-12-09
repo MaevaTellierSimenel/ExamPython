@@ -3,8 +3,6 @@ from colorama import init
 init()
 from colorama import Fore, Back, Style
 
-import random
-
 def defTableauJoueur(tableauJoueur1):
     for i in range (1,7):
         tableauJoueur1[i-1] = input("Quelle mot ? (Lettre par lettre en minuscule) : ")
