@@ -25,6 +25,7 @@ def chercherLesLettres (tableauAlea1, tableauJoueur1, verification1):
         if (verification1 == 3):
             print(Fore.WHITE + tableauJoueur1[i-1])
             print(Back.RED + tableauJoueur1[i-1])
+        print(Style.RESET_ALL)
         verification1 =3
     return verification1
     
