@@ -8,24 +8,28 @@ def defTableauJoueur(tableauMotMystere1, tableauJoueur1):
         tableauJoueur1[i-1] = input("Quelle mot ? (Lettre par lettre en minuscule) : ")
     return tableauJoueur1d
 
-def chercherLesLettres (tableauMotMystere1, tableauJoueur1):
+def chercherLesLettres (tableauMotMystere1, tableauJoueur1, verification1):
     for i in range (1,7):
         for j in range (1,7):
             if (tableauJoueur1[i-1] != tableauMotMystere1[j-1]):
+                verification1 = 'ailleurs'
+            if (tableauJoueur1[i-1] != tableauMotMystere1[0] and tableauMotMystere1[1] and tableauMotMystere1[2] and tableauMotMystere1[3] and tableauMotMystere1[4] and tableauMotMystere1[5]):
+                verification1 = 'presentNon'
+            if (verification1 == 'ailleurs'):
                 print(Fore.BLACK + tableauJoueur1[i-1])
                 print(Back.YELLOW + tableauJoueur1[i-1])
-            if (tableauJoueur1[i-1] != tableauMotMystere1[0] and tableauMotMystere1[1] and tableauMotMystere1[2] and tableauMotMystere1[3] and tableauMotMystere1[4] and tableauMotMystere1[5]):
+            if (verification1 == 'presentNon'):
             	print(Fore.WHITE + tableauJoueur1[i-1])
             	print(Back.BLUE + tableauJoueur1[i-1])
-            else :
+            if (verification1 == 'present'):
                 print(Fore.WHITE + tableauJoueur1[i-1])
                 print(Back.RED + tableauJoueur1[i-1])
 
 
 
 
-
 tableauMotMystere = ['c','a','s','t','o','r']
 tableauJoueur = ['_','_','_','_','_','_']
+verification = 'present'
 defTableauJoueur (tableauMotMystere, tableauJoueur)
 chercherLesLettres (tableauMotMystere, tableauJoueur)
