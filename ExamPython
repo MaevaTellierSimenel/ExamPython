@@ -32,6 +32,7 @@ def victoireTest (tableauJoueur1, tableauAlea1, victoire2):
     if (tableauJoueur1 == tableauAlea1):
         victoire2 = True
         print("C'EST GAGNE !")
+        print()
     else :
         print("PERDU")
 
