@@ -5,8 +5,8 @@ from colorama import Fore, Back, Style
 
 def defTableauJoueur(tableauMotMystere1, tableauJoueur1):
     for i in range (1,7):
-        tableauJoueur1[i-1] = input("Quelle mot ? (Lettre par lettre en minuscule)")
-    return tableauJoueur1
+        tableauJoueur1[i-1] = input("Quelle mot ? (Lettre par lettre en minuscule) : ")
+    return tableauJoueur1d
 
 def chercherLesLettres (tableauMotMystere1, tableauJoueur1):
     for i in range (1,7):
